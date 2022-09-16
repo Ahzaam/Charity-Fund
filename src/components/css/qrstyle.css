@@ -1,0 +1,29 @@
+.marktt{
+    margin-left: 5px;
+    margin-top: 5px;
+    display: inline-block;
+    
+    text-align: center;
+    align-items: center;
+    font-size: 50px;
+    color: #00ff88;
+    width: 100%;
+  }
+  .markxx{
+    width: 100%;
+   
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    
+    font-size: 50px;
+    color: #ff0000;
+  }
+
+  h4 {
+    margin: 20px 0 0 20px;
+    color: #727272;
+
+  }
+  

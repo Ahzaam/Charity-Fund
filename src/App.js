@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import {Button} from '@material-ui/core'
+import "./App.css";
+// import { Form } from './pages/AddPeoples';
+// import {Link} from "react-router-dom";
+import Navbar from "./components/AdminNav";
+import { QrHome } from "./pages/QrPage";
+import { AddMember } from "./pages/AddPeoples";
+import { Routes, Route } from "react-router-dom";
+import List from "./components/MemberList";
+import Container from "@material-ui/core/Container";
+import Home from './components/home';
+import EventList from './components/EventList';
 
+
+// import './Routes';
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container maxWidth="sm">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/list" element={<List/>} />
+          <Route path="/scanqr/:event/:month" element={<QrHome />} />
+          <Route path="/addnew" element={<AddMember />} />
+          <Route path="/list/:event/:month" element={<EventList/>} />
+        </Routes>
+      </Container>
+    </>
   );
 }
 
